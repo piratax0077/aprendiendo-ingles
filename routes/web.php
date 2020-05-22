@@ -20,7 +20,11 @@ Route::post('/index','InfoController@index')->name('index');
 Route::get('/how-work','InfoController@howWork')->name('how-work');
 Route::get('finalidad','InfoController@finalidad')->name('finalidad');
 Route::get('confirmar-pago/{id}','InfoController@confirmarPago')->name('confirmarPago');
-Route::get('datos/{id}','InfoController@datos')->name('datos');
+
+Route::get('ingles-idioma-universal','InfoController@inglesIdiomaUniversal')->name('ingles-idioma-universal');
+Route::get('como-afecta','InfoController@comoAfecta')->name('como-afecta');
+Route::get('social','InfoController@social')->name('responsabilidad-social');
+Route::get('subvencion-preferencial','InfoController@subvencion')->name('subvencion');
 
 Route::get('how-work/elementary','ModuloController@elementary')->name('elementary');
 Route::get('how-work/preliminary','ModuloController@preliminary')->name('preliminary');

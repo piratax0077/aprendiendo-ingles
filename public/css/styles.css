@@ -295,8 +295,11 @@
 	font-size: 23px;
 }
 
+.modulos-info .modulos{
+	width: auto;
+}
 .modulos-info .modulos a{
-	padding: 70px;
+	padding: 40px;
 }
 
 .modulos-info .modulo .titulo a{
@@ -322,7 +325,6 @@
 .modulos-botones a{
 	text-decoration: none;
 	font-size: 30px;
-	color: white;
 	padding-top: 7px;
 	padding-bottom: 7px;
 	padding-right: 30px;
@@ -330,9 +332,8 @@
 }
 
 .modulos-botones a:hover{
-	transition: 0.3s;
+	
 	background-color: #eef;
-	color: green;
 	border-radius: 10px;
 }
 
@@ -342,7 +343,7 @@
 	background: #eee;
 	border: 1px solid orange;
 	border-radius: 10px;
-	padding-left: 5px;
+	padding-left: 0px;
 }
 
 .modulo .subtitulo{
@@ -378,7 +379,6 @@
 .info-modulo h1{
 	font-weight: bold;
 	padding-left: 100px;
-	color: white;
 }
 
 .info-modulo h2{
@@ -416,6 +416,7 @@
 	padding: 10px;
 	border-top-right-radius: 10px;
 	border-bottom-right-radius: 10px;
+	text-align: justify;
 }
 
 .recibo-de-pago{
@@ -451,8 +452,17 @@
 
 .mision-vision{
 	padding: 140px;
-	background-color: black;
-	color: white;
+}
+
+#img-logo{
+	width: 300px;
+	height: auto;
+	border-radius: 10px;
+}
+
+#img-student-online{
+	width: 200px;
+	margin-left: 50px;
 }
 
 

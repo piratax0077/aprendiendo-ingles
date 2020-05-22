@@ -33,10 +33,10 @@
           El ingles, idioma universal
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="{{route('datos',['id'=>1])}}">El ingles es el idioma universal</a>
-          <a class="dropdown-item" href="{{route('datos',['id'=>2])}}">Como afecta no hablar ingles</a>
-          <a class="dropdown-item" href="{{route('datos',['id'=>3])}}">Responsabilidad social</a>
-          <a class="dropdown-item" href="{{route('datos',['id'=>4])}}">Subvención preferencial</a>
+          <a class="dropdown-item" href="{{route('ingles-idioma-universal')}}">El ingles es el idioma universal</a>
+          <a class="dropdown-item" href="{{route('como-afecta')}}">Como afecta no hablar ingles</a>
+          <a class="dropdown-item" href="{{route('responsabilidad-social')}}">Responsabilidad social</a>
+          <a class="dropdown-item" href="{{route('subvencion')}}">Subvención preferencial</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Otro</a>
         </div>

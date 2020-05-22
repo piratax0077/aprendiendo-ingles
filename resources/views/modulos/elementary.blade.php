@@ -1,8 +1,8 @@
 @extends('layout.app')
 @section('content')
 <div class="contenedor">
-
-<div class="row" style="background-color: #000; color: white;">
+@include('includes.slider')
+<div class="row">
 	<div class="col-md-6 info-modulo-boton">
 		<div class="info-modulo">
 			<h1>Elementary - Nivel Básico</h1>
@@ -32,7 +32,7 @@
 		@include('includes.modulos.links')
 	</div>
 </div>	
-
+@include('includes.nuestra-escuela-online')
 </div>
 
 

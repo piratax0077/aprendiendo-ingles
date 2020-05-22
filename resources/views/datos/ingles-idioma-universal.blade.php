@@ -1,0 +1,6 @@
+@extends('layout.app')
+@section('content')
+<div class="contenedor">
+	<p>CON MAYOR CANTIDAD DE HABLANTES NO NATIVOS, 1.5 BILLONES DE PERSONAS (SEGUNDA LENGUA)  Y PREVALECE  EN LA CANTIDAD DE PUBLICACIONES DE   INVESTIGACIONES CIENTÍFICAS, LIBROS,  E INTERNET</p>
+</div>
+@endsection

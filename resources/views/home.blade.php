@@ -45,8 +45,9 @@
 					</div>
 				</div>
 			</div>-->
-			@include('includes.nuestra-escuela-online')
 			<!--
+			@include('includes.nuestra-escuela-online')
+			
 			<div class="ventajas-de-aprender-ingles">
 				<div class="row">
 					<div class="col-md-6">
