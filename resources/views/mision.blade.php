@@ -1,0 +1,10 @@
+@extends('layout.app')
+@section('content')
+<div class="contenedor">
+	<div class="mision-vision">
+		<h1>Misión</h1>
+		<p>NOS INTERESA DE SOBRE MANERA QUE NUESTRA PROPUESTA  ONLINE ENGLISH NEW DEAL (ADVANCE LEARNERS PROGRAM), PERMITA   CONTRIBUIR  Y   COADYUVAR A UNA  NUEVA GENERACIÓN BILINGÜE. DESARROLLAR LAS HABILIDADES COMUNICATIVAS   SPEAKING Y LISTENING</p>
+	</div>
+	
+</div>
+@endsection
