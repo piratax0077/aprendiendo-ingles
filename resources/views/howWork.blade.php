@@ -5,10 +5,8 @@
   @include('includes.slider')
  
   <div class="row mt-3 pl-1">
-  	<div class="col-md-3">
-  		<img src="{{asset('img/logo-4.JPG')}}" id="img-logo">
-  	</div>
-  	<div class="col-md-3 ">
+  	
+  	<div class="col-md-4 ">
   		<button id="mostrar" class="btn btn-success ">
 		  	<i class="fas fa-search"></i> Metodologia online
 		 </button>
@@ -20,7 +18,7 @@
 		  	<img src="{{asset('img/student-online.JPG')}}" id="img-student-online">
 		  </div>
   	</div>
-  	<div class="col-md-3">
+  	<div class="col-md-4">
   		<button id="mostrar-2" class="btn btn-success ">
 		  	<i class="fas fa-search"></i> Metodologia nemotecnica
 		 </button>
@@ -32,12 +30,12 @@
 		  		<li>Fácil</li>
 		  		<li>Amena</li> 
 		  		<li>Eficaz</li> 
-		  	  <p>Es un concepto pedagogíco escencial que ayuda a desarrollar todas las categorias de habilidades productivas y receptivas, listening, speaking, mejorando asi la capacidad de memorizar, permitiendo reducir el estres y la fatiga que produce el aprendizaje del idioma inglés.</p>
+		  	  <p>Es un concepto pedagógico escencial que ayuda a desarrollar todas las categorias de habilidades productivas y receptivas, listening, speaking, mejorando asi la capacidad de memorizar, permitiendo reducir el estres y la fatiga que produce el aprendizaje del idioma inglés.</p>
 		  	  <li>Avance real continuo </li>
 		  	  <li>Practica semanal de contenidos academicos</li>
 		  </div>
   	</div>
-  <div class="col-md-3">
+  <div class="col-md-4">
   		<button id="mostrar-3" class="btn btn-success ">
 		  	<i class="fas fa-search"></i> Ventajas y beneficios
 		 </button>
@@ -53,8 +51,9 @@
   	</div>
  
 </div>
+
+</div>
 @include('includes.modulos.index')
 @include('includes.nuestra-escuela-online')
-</div>
 @endsection
 

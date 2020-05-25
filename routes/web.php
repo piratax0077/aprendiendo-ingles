@@ -31,3 +31,5 @@ Route::get('how-work/preliminary','ModuloController@preliminary')->name('prelimi
 Route::get('how-work/higher','ModuloController@higher')->name('higher');
 Route::get('vision','ModuloController@vision')->name('vision');
 Route::get('mision','ModuloController@mision')->name('mision');
+
+

@@ -1,53 +1,48 @@
 <form class="form-white" action="{{ route('index') }}" method="post">
 	@csrf
 	<h3>Empieza a aprender</h3>
-					  <div class="form-row">
+		<div class="form-row">
 					    <div class="form-group col-md-6">
 					      <label for="nombre">Nombre</label>
-					      <input type="text" class="form-control" name="nombre" placeholder="Nombre">
+					      <input type="text" class="form-control" name="nombre" placeholder="Nombre" required>
 					    </div>
-					    
+
 					    <div class="form-group col-md-6">
 					      <label for="apellido">Apellido</label>
-					      <input type="text" class="form-control" name="apellido" placeholder="Apellido">
+					      <input type="text" class="form-control" name="apellido" placeholder="Apellido" required>
 					    </div>
 					  </div>
 					  <div class="form-group">
 					    <label for="email">Email</label>
-					    <input type="email" class="form-control" name="email" placeholder="Email">
+					    <input type="email" class="form-control" name="email" placeholder="Email" required>
 					  </div>
 					  <div class="form-group">
-					    <label for="inputAddress2">Address 2</label>
-					    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+					    <label for="inputAddress2">Precio total</label>
+					    @if(isset($precio))
+					    <input type="text" class="form-control" id="inputAddress2" value="{{$precio}}" name="valor" readonly>
+					    @else
+					    <input type="text" class="form-control" id="inputAddress2" disabled="true" name="valor">
+					    @endif
 					  </div>
 					  <div class="form-row">
+					    
+					    <!--Parte importante -->
 					    <div class="form-group col-md-6">
-					      <label for="inputCity">City</label>
-					      <input type="text" class="form-control" id="inputCity">
-					    </div>
-					    <div class="form-group col-md-4">
-					      <label for="inputState">State</label>
-					      <select id="inputState" class="form-control">
-					        <option selected>Choose...</option>
-					        <option>...</option>
+					      <label for="inputState">Region</label>
+					      <select id="regiones" class="form-control" name="region" required>
+					        
 					      </select>
 					    </div>
-					    <div class="form-group col-md-2">
-					      <label for="inputZip">Zip</label>
-					      <input type="text" class="form-control" id="inputZip">
+					    <div class="form-group col-md-6">
+					      <label for="inputState">Ciudad</label>
+					      <select id="comunas" class="form-control" name="comuna" required>
+					        
+					      </select>
 					    </div>
+						<!-- Fin parte importante -->
+
 					  </div>
-					  <div class="form-group">
-					    <div class="form-check">
-					      <input class="form-check-input" type="checkbox" id="gridCheck">
-					      <label class="form-check-label" for="gridCheck">
-					        Check me out
-					      </label>
-					    </div>
-					  </div>
-					  <div class="btn-group btn-group-justified para-quien">
-					  	<button type="button" class="btn btn-default btn-primary">Para mi</button>
-					  	<button type="button" class="btn btn-default btn-primary">Para mi hijo</button>
-					  </div>
-					  <button type="submit" class="btn boton">Comienza ahora</button>
+					  
+
+					  <button type="submit" class="btn boton" id="btn-de-pago">Continuar con el pago</button>
 					</form>

@@ -4,80 +4,35 @@
 
 		<div class="contenedor">
 			@include('includes.slider')
-			</div>
-			<!--
-			<div class="form-contact">
-				<div class="row">
-				<div class="col-md-8">
-				@include('includes.info')
-				</div>
-				<div class="col-md-4">
-					@include('includes.form')
-				</div>
-			</div>
-			</div>
-			
-			<div class="publicidad">
-				<div class="row">
-					<div class="col-md-6">
-						<h2>El metodo mas efectivo de Lationoamerica</h2>
-						<p>Nuestro método comprobado se basa en estos tres pilares</p>
-						<ul>
-							<li>
-								<span class="titulo">Profesores norteamericanos</span>
-								<p>¡Habla inglés sin pena! Nuestros profesores certificados te enseñarán a pronunciar el inglés con la correcta pronunciación para que puedas hablar el idioma en público.</p>
-							</li>
-							<li>
-								<span class="titulo">Clases en vivo</span>
-								<p>Disfruta nuestras entretenidas clases en tiempo real conversando de temas que te gusten, tales como negocios, viajes y deportes.</p>
-							</li>
-							<li>
-								<span class="titulo">Herramientas innovadoras</span>
-								<p><strong>¿Quieres complementar tus clases?</strong> Perfecciona tu pronunciación, gramática y vocabulario con divertidos ejercicios prácticos, herramientas de reconocimiento de voz, diccionario y traductor</p>
-							</li>
-							<a href="{{ route('how-work') }}" class="btn boton">¡Conoce como funciona!</a>
-						</ul>
-					</div>
 
-				
-					<div class="col-md-6">
-						<img src="https://www.openenglish.com/wp-content/uploads/2019/05/oe_website_refresh_2019_computer.jpg">
-					</div>
-				</div>
-			</div>-->
-			<!--
-			@include('includes.nuestra-escuela-online')
-			
-			<div class="ventajas-de-aprender-ingles">
-				<div class="row">
-					<div class="col-md-6">
-						<img src="https://media.istockphoto.com/vectors/male-english-teacher-vector-id961265992">
-					</div>
-					<div class="col-md-6">
-						
-						<div class="puntos-importantes">
-							<h1>4 grandes ventajas de aprender inglés</h1>
-							<div class="row">
-							<div class="col-md-6">
-								<p><i class="far fa-gem"></i> Incrementar el valor de tu perfil profesional</p>
-							</div>
-							<div class="col-md-6">
-								<p><i class="fas fa-phone-volume"></i> Tienes mejores ofertas laborales</p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-6">
-								<p><i class="fas fa-rocket"></i> Consigues mas oportunidades académicas en el exterior</p>
-							</div>
-							<div class="col-md-6">
-								<p><i class="fas fa-map-marked-alt"></i> Viajas al mundo y te comunicas con facilidad</p>
-							</div>
-						</div>
-						</div>
-						
-					</div>
-				</div>
+	<div class="ingles-idioma-universal">
+
+				<img src="https://blog.funcas.es/wp-content/uploads/2019/01/PEE158_01.jpg">
+				<h2>Ingles como idioma universal</h2>
+				<p >Con mayor cantidad de habitantes no nativos, 1.5 billones de personas (Segunda lengua), prevalece en la cantidad de publicaciones de investigaciones cientificas, libros e internet.</p>
+	</div>
+
+
+
+	<div class="como-afecta">
+				<h2>Como afecta no hablar ingles</h2>
+				<img src="{{asset('img/logo-importante.JPG')}}" >
+				<p>Estos resultados son desalentadores, solo el <span style="color: red;">32% </span> de los estudiantes de enseñanza media logran o superan el nivel básico A2. Este bajo nivel de inglés previo a los estudios superiores se ve afectado por el cambio de metodología y terminan titulandose sin hablar ingles de manera efectiva.</p>
 			</div>
-			-->
-		
+
+
+				<div class="responsabilidad-social">
+				<img src="{{asset('img/student-online.JPG')}}" >
+				<h2>Responsabilidad social</h2>
+				<p >Con una firme convicción y concientes de nuestra responsabilidad social, queremos poner al alcance de la comunidad en general, beneficios preferenciales con <span style="color: red; text-decoration: underline;">becas 100%</span> y <span style="color: red; text-decoration: underline;">subvenciones del 75%</span>, para que de esta forma los estudiantes se comuniquen utilizando el idioma ingles como una herramienta altamente competitiva, fundamental para generar más y mejores oportunidades.</p>
+			</div>
+
+
+			<div class="subvencion">
+				<h2>Subvenciones</h2>
+				<img src="https://conceptodefinicion.de/wp-content/uploads/2015/02/subvenciones.jpg">
+				<p>Un elemento de diferenciación del precio real <span style="color: red;">$300.000</span></p>
+				<p>Precio subvención preferencial 75%, Matricula <span style="color: red;">$ 49.900</span></p>
+			</div>
+		</div>
 		@endsection

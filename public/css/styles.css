@@ -191,7 +191,7 @@
 .far,
 .fas,
 .fab{
-	color: white;
+	color: orange;
 	size: 100px;
 }
 
@@ -426,11 +426,11 @@
 }
 
 .recibo-de-pago .titulo-curso{
-	padding-left: 290px;
+	padding-left: 250px;
 }
 
 .recibo-de-pago .img-pago-curso{
-	margin-left: 228px;
+	margin-left: 190px;
 	margin-top: 20px;
 }
 
@@ -465,5 +465,106 @@
 	margin-left: 50px;
 }
 
+.ingles-idioma-universal,
+.como-afecta,
+.responsabilidad-social,
+.subvencion{
+	height: 300px;
+	width: 100%;
+	margin-bottom: 3px;
+}
 
+.ingles-idioma-universal{
+	margin-top: 10px;
+	display: block;
+	margin-bottom: 15px;
+}
+
+.ingles-idioma-universal h2,
+.responsabilidad-social h2{
+	padding-left: 450px;
+	color: orange;
+	margin-top: 20px;
+}
+
+.ingles-idioma-universal img,
+.responsabilidad-social img{
+	float: left;
+	width: 300px;
+	height: 300px;
+	display: inline-block;
+	border-radius: 500px;
+}
+
+.responsabilidad-social img{
+	border-radius: 10px;
+	margin-left: 30px;
+}
+
+.ingles-idioma-universal p,
+.responsabilidad-social p{
+	float: right;
+	text-align: justify;
+	display: inline-block;
+	width: 900px;
+	padding-top: 60px;
+	padding-right: 50px;
+	font-size: 27px;
+}
+
+.responsabilidad-social p{
+	font-size: 24px;
+}
+
+.como-afecta,
+.subvencion{
+	background-color: #eee;
+	display: block;
+	padding: 10px;
+}
+
+.como-afecta h2,
+.subvencion h2{
+	float: left;
+	color: orange;
+}
+
+.como-afecta img,
+.subvencion img{
+	float: right;
+	width: 280px;
+	height: 280px;
+	display: inline-block;
+	border-radius: 500px;
+	margin-right: 5px;
+}
+
+.como-afecta p,
+.subvencion p{
+	float: left;
+	text-align: justify;
+	display: inline-block;
+	width: 900px;
+	padding-top: 10px;
+	padding-right: 50px;
+	font-size: 25px;
+}
+
+.responsabilidad-social p{
+	padding-top: 10px;
+}
+
+.form-confirmar-pago{
+	margin-left: 300px;
+	margin-right: 300px;
+}
+
+.form-confirmar-pago h3{
+	margin-left: 93px;
+	font-size: 34px;
+}
+
+.form-confirmar-pago .boton{
+	margin-left: 250px;
+}
 

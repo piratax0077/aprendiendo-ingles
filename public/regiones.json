@@ -1,0 +1,8 @@
+{
+    region: "Arica y parinacota,
+    comunas:["Arica", "Camarones", "Putre", "General Lagos"]
+},
+{
+    region: "Tarapacá,
+    comunas:["Iquique", "Alto Hospicio", "Pozo Almonte", "Camiña", "Colchane", "Huara", "Pica"]
+}

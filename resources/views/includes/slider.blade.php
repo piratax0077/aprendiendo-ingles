@@ -7,7 +7,7 @@
 				  </ol>
 				  <div class="carousel-inner">
 				    <div class="carousel-item active">
-				      <img class="d-block w-100" src="../../img/slider-1.jpg" alt="First slide" style="height: 400px;">
+				      <img class="d-block w-100" src="https://www.els.edu.pa/wp-content/uploads/2020/04/CLASES-DE-INGLES-ELS-642x336.png" alt="First slide" style="height: 400px;">
 				    </div>
 				    <div class="carousel-item">
 				      <img class="d-block w-100" src="../../img/slider-2.jpg" alt="Second slide" style="height: 400px;">

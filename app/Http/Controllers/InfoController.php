@@ -6,9 +6,39 @@ use Illuminate\Http\Request;
 
 class InfoController extends Controller
 {
-    public function index(){
+    public function index(Request $request){
+
+        // Validación del formulario
+        $validate = $this->validate($request, [
+            'nombre' => 'required|string|max:255',
+            'apellido' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255',
+            'region' => 'required|string',
+            'comuna' => 'required|string'
+        ]);
+
     	
-    	return view('info');
+        $nombre = $request->input('nombre');
+        $apellido = $request->input('apellido');
+        $email = $request->input('email');
+        $valor = $request->input('valor');
+        $region = $request->input('region');
+        $comuna = $request->input('comuna');
+
+        $valor_double = doubleval($valor);
+
+if ($region == "sin-region" || $comuna == "sin-comuna") {
+    return redirect()->route('home');
+}
+
+    	return view('info',[
+            'nombre' => $nombre,
+            'apellido' => $apellido,
+            'email' => $email,
+            'valor' => $valor_double,
+            'region' => $region,
+            'comuna' => $comuna
+        ]);
     }
 
     public function home(){

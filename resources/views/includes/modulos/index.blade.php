@@ -1,9 +1,9 @@
 <div class="modulos-info">
   <div class="row">
-  <div class="col-md-6">
+  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
     <img src="{{asset('img/student.JPG')}}" /> 
   </div>
-  <div class="col-md-6 modulo">
+  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 modulo">
     <h2>Modulos</h2>
     <h3 class="titulo"><a href="{{ route('elementary') }}"> Elementary (Nivel básico)</a></h3>
     <span class="subtitulo">A1 - A2</span>
