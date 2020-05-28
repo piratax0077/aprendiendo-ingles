@@ -36,7 +36,7 @@
 			<a href="{{route('confirmarPago',['id' => 3])}}" class="btn boton">¡Inscribete ya!</a>
 		</div>
 		
-		<img class="logo-right" src="{{asset('img/student2-online.JPG')}}" >
+		<img class="logo-right" src="{{asset('img/estatua-libertad.JPG')}}" >
 		<img class="logo-right" src="{{asset('img/students-online.JPG')}}" >
 		
 </div>

@@ -8,6 +8,13 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+// Register $ global var for jQuery
+import $ from 'jquery';
+window.$ = window.jQuery = $;
+// Import jQuery Plugins
+import 'jquery-ui/ui/widgets/datepicker.js';
+import 'jquery-ui/ui/widgets/tooltip.js';
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue

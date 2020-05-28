@@ -78,8 +78,7 @@ $(document).ready(function(){
 			$('.ir-arriba').slideUp(300);
 		}
 	});
-$( "#accordion" ).accordion();
-$( "#tabs" ).tabs();
+
 
 var caja = $("#caja");
 
@@ -204,5 +203,7 @@ jQuery('#comunas').change(function () {
 
 }
 
+$('#datepicker').datepicker();
+$('.boton').tooltip();
 
 });

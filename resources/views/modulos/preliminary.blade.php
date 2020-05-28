@@ -43,7 +43,7 @@
 					<a style="margin-bottom: 30px;" href="{{route('confirmarPago',['id' => 2])}}" class="btn boton">¡Inscribete ya!</a>
 			</div>
 
-		<img class="logo-right" src="{{asset('img/student2-online.JPG')}}" >
+		<img class="logo-right" src="{{asset('img/student4-online.JPG')}}" >
 		<img class="logo-right" src="{{asset('img/speaking-airport.JPG')}}" >
 </div>
 

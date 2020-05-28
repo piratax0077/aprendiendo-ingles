@@ -17,7 +17,9 @@
 	<title>Aprendiendo laravel</title>
 </head>
 <body>
-  
+  <div id='app'>
+    
+  </div>
 <nav class="navbar navbar-expand-lg navbar-light">
   
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,6 +49,7 @@
                                 </li>
                             @endif
                         @else
+                        <li><button class="btn boton" title="Realizar quiz para determinar que curso le conviene">Realizar quiz</button></li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     <i class="fas fa-user" style="color: black;"></i> {{ Auth::user()->name }} <span class="caret"></span>
@@ -110,7 +113,7 @@
       </div>
       <div class="col-md-3 col-xs-1 fono">
         <p><i class="fas fa-phone"></i> 0512-323156</p>
-        <img src="{{asset('img/logo-3.JPG')}}" class="logo-right"> 
+        <img src="{{asset('img/logo-5.JPG')}}" class="logo-right"> 
       </div>
     </div>
   </div>

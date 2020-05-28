@@ -32,9 +32,8 @@
 					    <input type="text" class="form-control" id="inputAddress2" disabled="true" name="valor">
 					    @endif
 					  </div>
+					  <!--Parte importante -->
 					  <div class="form-row">
-					    
-					    <!--Parte importante -->
 					    <div class="form-group col-md-6">
 					      <label for="inputState">Region</label>
 					      <select id="regiones" class="form-control" name="region" required>
@@ -47,9 +46,25 @@
 					        
 					      </select>
 					    </div>
+					    </div>
 						<!-- Fin parte importante -->
-
-					  </div>
+						<div class="form-row">
+							<div class="form-group col-md-6">
+							<label for="date">Indique dia para sus clases</label>
+							<input type="text" name="date" id="datepicker" class="form-control" required>
+							</div>
+							<div class="form-group col-md-6">
+							<label for="date">Horario</label>
+							<select class="form-control">
+								<option value="">Seleccione su horario</option>
+								<option value="1">09:00 a 11:00</option>
+								<option value="2">19:30 a 22:00</option>
+							</select>
+							</div>
+						</div>
+						
+						
+					  
 					  
 
 					  <button type="submit" class="btn boton" id="btn-de-pago">Continuar con el pago</button>

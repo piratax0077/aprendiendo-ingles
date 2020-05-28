@@ -10,7 +10,7 @@
 				      <img class="d-block w-100" src="{{asset('img/slider-1.JPG')}}" alt="First slide" style="height: 400px;">
 				    </div>
 				    <div class="carousel-item">
-				      <img class="d-block w-100" src="{{asset('img/slider-3.JPG')}}" alt="Second slide" style="height: 400px;">
+				      <img class="d-block w-100" src="{{asset('img/slider-4.JPG')}}" alt="Second slide" style="height: 400px;">
 				    </div>
 				    <div class="carousel-item">
 				      <img class="d-block w-100" src="{{asset('img/slider-6.JPG')}}" alt="Third slide" style="height: 400px;">
