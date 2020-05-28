@@ -156,6 +156,9 @@ $.get('https://mindicador.cl/api',function(response){
 	console.log(response.dolar.valor);
 });
 
+ciudades();
+
+function ciudades(){
 
 var iRegion = 0;
 var htmlRegion = '<option value="sin-region">Seleccione región</option><option value="sin-region">--</option>';
@@ -198,5 +201,8 @@ jQuery('#comunas').change(function () {
 			alert('selecciones Región');
 		}
 	});
+
+}
+
 
 });

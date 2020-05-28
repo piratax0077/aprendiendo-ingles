@@ -3,42 +3,70 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Auth;
+use App\Cursos;
+use App\Ventas;
 
 class InfoController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function index(Request $request){
+
+        $user = Auth::user();
+        $id = $user->id;
 
         // Validación del formulario
         $validate = $this->validate($request, [
-            'nombre' => 'required|string|max:255',
-            'apellido' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255',
             'region' => 'required|string',
             'comuna' => 'required|string'
         ]);
 
-    	
-        $nombre = $request->input('nombre');
-        $apellido = $request->input('apellido');
-        $email = $request->input('email');
+
         $valor = $request->input('valor');
         $region = $request->input('region');
         $comuna = $request->input('comuna');
+        $idCurso = $request->input('idCurso');
+
+
+
+        $idCursoInt = intval($idCurso);
 
         $valor_double = doubleval($valor);
 
-if ($region == "sin-region" || $comuna == "sin-comuna") {
-    return redirect()->route('home');
-}
+        if ($region == "sin-region" || $comuna == "sin-comuna") {
 
-    	return view('info',[
-            'nombre' => $nombre,
-            'apellido' => $apellido,
-            'email' => $email,
-            'valor' => $valor_double,
-            'region' => $region,
-            'comuna' => $comuna
-        ]);
+        return redirect()->route('confirmarPago',['id' => $idCursoInt])->with(['message' => '¡ Error ! Debe seleccionar una región y una comuna asociada']);
+            
+        }else{
+            $venta = new Ventas();
+
+            $venta->idCurso = $idCursoInt;
+            $venta->idUser = $id;
+            $venta->valor = $valor_double;
+            $venta->region = $region;
+            $venta->comuna = $comuna;
+
+            $venta->save();
+
+            if ($venta) {
+
+                return view('info',[
+                'nombre' => $user->name,
+                'apellido' => $user->surname,
+                'email' => $user->email,
+                'valor' => $valor_double,
+                'region' => $region,
+                'comuna' => $comuna
+            ]);
+
+        }
+        }
+
     }
 
     public function home(){
@@ -46,7 +74,11 @@ if ($region == "sin-region" || $comuna == "sin-comuna") {
     }
 
     public function howWork(){
-    	return view('howWork');
+        $modulos = Cursos::all();
+
+    	return view('howWork',[
+            'modulos' => $modulos
+        ]);
     }
 
     public function finalidad(){
@@ -54,27 +86,17 @@ if ($region == "sin-region" || $comuna == "sin-comuna") {
     }
 
     public function confirmarPago($id){
+ 
 
-        if($id == 1){
-            $titulo = "Elementary";
-            $precio = 100;
-            $nivel = "Básico";
+        $id_int = intval($id);
 
-        }elseif ($id == 2) {
-            $titulo = "Preliminary";
-            $precio = 200;
-            $nivel = "Intermedio";
-        }else{
-            $titulo = "Higher";
-            $precio = 300;
-            $nivel = "Profesional";
-        }
+        $curso = Cursos::where('id',$id_int)->first();
 
         return view('confirmar-pago',[
-            'id' => $id,
-            'titulo' => $titulo,
-            'precio' => $precio,
-            'nivel' => $nivel
+            'id' => $curso->id,
+            'titulo' => $curso->nombreCurso,
+            'precio' => $curso->valor,
+            'nivel' => $curso->nivel
         ]);
         
     }
@@ -93,5 +115,34 @@ if ($region == "sin-region" || $comuna == "sin-comuna") {
 
    public function subvencion(){
     return view('datos.subvencion');
+   }
+
+   public function online(){
+    return view('metodologia-online');
+   }
+
+   public function nemotecnica(){
+    return view('metodologia-nemotecnica');
+   }
+
+   public function ventajas(){
+    return view('ventajas');
+   }
+
+   public function misCursos($id){
+        $user = Auth::User();
+        $misVentas = Ventas::where('idUser',$id)->orderBy('id', 'desc')->get();
+
+        return view('user.mis-cursos',[
+            'id' => $id,
+            'misVentas' => $misVentas
+        ]); 
+   }
+
+   public function detalleVenta($id){
+        $miVenta = Ventas::find($id);
+        return view('user.detalle-venta',[
+            'miVenta' => $miVenta
+        ]);
    }
 }

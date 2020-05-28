@@ -7,13 +7,13 @@
 				  </ol>
 				  <div class="carousel-inner">
 				    <div class="carousel-item active">
-				      <img class="d-block w-100" src="https://www.els.edu.pa/wp-content/uploads/2020/04/CLASES-DE-INGLES-ELS-642x336.png" alt="First slide" style="height: 400px;">
+				      <img class="d-block w-100" src="{{asset('img/slider-1.JPG')}}" alt="First slide" style="height: 400px;">
 				    </div>
 				    <div class="carousel-item">
-				      <img class="d-block w-100" src="../../img/slider-2.jpg" alt="Second slide" style="height: 400px;">
+				      <img class="d-block w-100" src="{{asset('img/slider-3.JPG')}}" alt="Second slide" style="height: 400px;">
 				    </div>
 				    <div class="carousel-item">
-				      <img class="d-block w-100" src="../../img/slider-3.jpg" alt="Third slide" style="height: 400px;">
+				      <img class="d-block w-100" src="{{asset('img/slider-6.JPG')}}" alt="Third slide" style="height: 400px;">
 				    </div>
 			  	   </div>
 			  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

@@ -1,6 +1,8 @@
 @extends('layout.app')
 @section('content')
+
 <div class="contenedor">
+	@include('includes.message')
 	<div class="recibo-de-pago">
 		
 		<div class="row">
@@ -26,8 +28,13 @@
 		
 	</div>
 	
+<?php
+	$user = Auth::user();
+	
+?>
+
 	<div class="form-confirmar-pago">
-	@include('includes.form')	
+	@include('includes.form',['id' => $id,'user' => $user])	
 	</div>
 		
 	

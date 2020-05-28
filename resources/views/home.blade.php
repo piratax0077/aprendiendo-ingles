@@ -3,8 +3,9 @@
 		@section('content')
 
 		<div class="contenedor">
+			
 			@include('includes.slider')
-
+			@include('includes.message')
 	<div class="ingles-idioma-universal">
 
 				<img src="https://blog.funcas.es/wp-content/uploads/2019/01/PEE158_01.jpg">
@@ -34,5 +35,6 @@
 				<p>Un elemento de diferenciación del precio real <span style="color: red;">$300.000</span></p>
 				<p>Precio subvención preferencial 75%, Matricula <span style="color: red;">$ 49.900</span></p>
 			</div>
+			
 		</div>
 		@endsection

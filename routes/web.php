@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'InfoController@home')->name('home');
+
 
 Route::post('/index','InfoController@index')->name('index');
 
@@ -31,5 +31,13 @@ Route::get('how-work/preliminary','ModuloController@preliminary')->name('prelimi
 Route::get('how-work/higher','ModuloController@higher')->name('higher');
 Route::get('vision','ModuloController@vision')->name('vision');
 Route::get('mision','ModuloController@mision')->name('mision');
+Route::get('mis-cursos/{id}','InfoController@misCursos')->name('misCursos');
+Route::get('detalle-venta/{id}','InfoController@detalleVenta')->name('detalle-venta');
 
 
+Auth::routes();
+
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('metodologia-online','InfoController@online')->name('online');
+Route::get('metodologia-nemotecnica','InfoController@nemotecnica')->name('nemotecnica');
+Route::get('ventajas-beneficios','InfoController@ventajas')->name('ventajas');

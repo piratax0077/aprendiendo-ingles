@@ -3,19 +3,42 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Cursos;
+use App\Ventas;
 
 class ModuloController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function elementary(){
-    	return view('modulos.elementary');
+
+        $modulos = Cursos::all();
+
+    	return view('modulos.elementary',[
+            'modulos' => $modulos
+        ]);
     }
 
     public function preliminary(){
-    	return view('modulos.preliminary');
+
+        $modulos = Cursos::all();
+
+    	return view('modulos.preliminary',[
+            'modulos' => $modulos
+        ]);
     }
 
     public function higher(){
-    	return view('modulos.higher');
+
+        $modulos = Cursos::all();
+
+    	return view('modulos.higher',[
+            'modulos' => $modulos
+        ]);
     }
 
     public function vision(){
