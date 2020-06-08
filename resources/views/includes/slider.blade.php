@@ -7,7 +7,7 @@
 				  </ol>
 				  <div class="carousel-inner">
 				    <div class="carousel-item active">
-				      <img class="d-block w-100" src="{{asset('img/slider-1.JPG')}}" alt="First slide" style="height: 400px;">
+				      <img class="d-block w-100" src="https://cdn.shortpixel.ai/client/to_webp,q_lossy,ret_img,w_626/https://blog.amazingtalker.com/wp-content/uploads/2020/02/Learn-English.jpg" alt="First slide" style="height: 400px;">
 				    </div>
 				    <div class="carousel-item">
 				      <img class="d-block w-100" src="{{asset('img/slider-4.JPG')}}" alt="Second slide" style="height: 400px;">

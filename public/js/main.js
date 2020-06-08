@@ -102,59 +102,6 @@ $("#ocultar").click(function(){
 		
 	});
 
-var caja2 = $("#caja2");
-caja2.hide();
-
-$("#ocultar-2").hide();
-
-$("#mostrar-2").click(function(){
-		$(this).hide();
-		$("#ocultar-2").show();
-
-		caja2.slideDown('slow');
-	});
-
-$("#ocultar-2").click(function(){
-		$(this).hide();
-		$("#mostrar-2").show();
-
-		caja2.slideUp('slow', function(){
-			console.log("Cartel ocultado");
-		});
-		
-	});
-
-var caja3 = $("#caja3");
-caja3.hide();
-
-$("#ocultar-3").hide();
-
-$("#mostrar-3").click(function(){
-		$(this).hide();
-		$("#ocultar-3").show();
-
-		caja3.slideDown('slow');
-	});
-
-$("#ocultar-3").click(function(){
-		$(this).hide();
-		$("#mostrar-3").show();
-
-		caja3.slideUp('slow', function(){
-			console.log("Cartel ocultado");
-		});
-		
-	});
-
-
-$.get("https://reqres.in/api/users", function(response){
-		console.log(response.data);
-	});	
-
-$.get('https://mindicador.cl/api',function(response){
-	console.log(response.dolar.valor);
-});
-
 ciudades();
 
 function ciudades(){
@@ -203,7 +150,42 @@ jQuery('#comunas').change(function () {
 
 }
 
-$('#datepicker').datepicker();
+/* Datepicker */
+
+$("#datepicker").datepicker({
+showButtonPanel: true,
+firstDay: 1,
+dateFormat: 'dd-mm-yy',
+minDate: "0D",
+maxDate: "+2M, -10D",
+monthNames: ['Enero', 'Febrero', 'Marzo',
+'Abril', 'Mayo', 'Junio',
+'Julio', 'Agosto', 'Septiembre',
+'Octubre', 'Noviembre', 'Diciembre'],
+dayNamesMin: ['Dom', 'Lun', 'Mar', 'Mier', 'Jue', 'Vie', 'Sab'],
+
+});
+
+/* Fin Datepicker */
+
+$("#recomendation").hide();
+$('#btnRecomendation').click(function(){
+	$("#recomendation").show();
+});
+
+$("#btnConfirmElementary").click(function(){
+	var response = confirm("No ha realizado el Quiz, ¿Desea continuar?");
+
+	if (response == true){
+		return true;
+	}else{
+		return false;
+	}
+});
+
+
+
 $('.boton').tooltip();
+
 
 });

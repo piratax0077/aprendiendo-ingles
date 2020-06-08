@@ -3,16 +3,15 @@
 <div class="contenedor">
 	<div class="p-4">
 		@if(count($misVentas) == 0)
-			<span>No ha realizado ninguna compra</span>
+			<span>No se ha matriculado en ninguno de nuestros modulos</span>
 		@else
-		<h1>Mis cursos</h1>
-	
-		<h2>Cursos comprados: {{count($misVentas)}}</h2>
-		
+		<h1 class="titulo">Mis Módulos ({{count($misVentas)}})</h1>
+			
 		<div class="row">
 			@foreach($misVentas as $miCurso)
+			@if($miCurso->estado !== "PENDIENTE")
 			<div class="col-md-4">
-				<div class="card" style="width: 18rem;">
+				<div class="card" style="width: 18rem; margin-bottom: 20px;">
 					  <img class="card-img-top" src="{{asset('img/bandera-usa.JPG')}}" alt="Card image cap">
 					  <div class="card-body">
 					    <h5 class="card-title">{{$miCurso->curso->nombreCurso}}</h5>
@@ -23,6 +22,7 @@
 
 				</div>
 			</div>
+			@endif
 			@endforeach
 		</div>
 	@endif

@@ -13,8 +13,11 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}">
     <link rel="stylesheet" type="text/css" href="{{asset('fas/css/all.css')}}">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    
-	<title>Aprendiendo laravel</title>
+    <head>
+       ...
+       {!! NoCaptcha::renderJs() !!}
+    </head>
+	<title>English New Deal</title>
 </head>
 <body>
   <div id='app'>
@@ -31,15 +34,44 @@
                     <ul class="navbar-nav mr-auto">
                       @if(Auth::user())
                     <li class="nav-item active">
-                        <a class="nav-link" href="{{route('home')}}"><i class="fas fa-home" style="color: black;"></i> Inicio<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="{{route('home')}}"><i class="fas fa-home" ></i> Inicio<span class="sr-only">(current)</span></a>
                     </li>
                     @endif
+                    <li>
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" style="width: 50px; margin-left: 50px; margin-top: 4px;">
+                    </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
+                        <li> <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Flag_of_Chile.svg" style="width: 50px; margin-right: 50px; margin-top: 4px;"></li>
                         @guest
+                        <form class="form-inline" method="post" action="{{ route('login') }}">
+                          @csrf
+                          <div class="form-group mb-2">
+                            <label for="staticEmail2" class="sr-only">Email</label>
+                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email">
+                            @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                          </div>
+                          <div class="form-group mx-sm-3 mb-2">
+                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Password">
+
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                          </div>
+                          <button type="submit" class="btn btn-success">
+                                    {{ __('Login') }}
+                                </button>
+                        </form>
+
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
@@ -49,14 +81,15 @@
                                 </li>
                             @endif
                         @else
-                        <li><button class="btn boton" title="Realizar quiz para determinar que curso le conviene">Realizar quiz</button></li>
+                        
+                        <li><a href="{{route('quiz')}}" class="btn boton" title="Realizar quiz para determinar que módulo le conviene">Realizar quiz</a></li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    <i class="fas fa-user" style="color: black;"></i> {{ Auth::user()->name }} <span class="caret"></span>
+                                    <i class="fas fa-user"></i> {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a href="{{route('misCursos',['id' => Auth::user()->id])}}" class="dropdown-item">Mis cursos</a>
+                                    <a href="{{route('misCursos',['id' => Auth::user()->id])}}" class="dropdown-item">Mis módulos</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -73,7 +106,7 @@
                     </ul>
                 </div>
   
-  </div><br>
+<br>
     
 </nav>
 <div class="sub-nav">
@@ -84,7 +117,7 @@
       <div class="col-md-7 col-xs-12">
         @if(Auth::user())
         <div class="dropdown" >
-            <a id="VisionDropDown" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre >Nosotros</a>
+            <a id="VisionDropDown" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre style="color: black !important" >Nosotros</a>
           <div class="dropdown-menu dropdown-menu-left" aria-labelledby="VisionDropDown">
             <a href="{{route('mision')}}" class="dropdown-item">Nuestra Misión</a>
             <a href="{{route('vision')}}" class="dropdown-item">Nuestra Visión</a>
@@ -92,7 +125,7 @@
           </div>
         </div>
         <div class="dropdown">
-          <a id="HowWorkDropDown" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Como funciona</a>
+          <a id="HowWorkDropDown" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black !important">Como funciona</a>
         <div class="dropdown-menu dropdown-menu-left" aria-labelledby="HowWorkDropDown">
           <a href="{{route('online')}}" class="dropdown-item">Metodología Online</a>
           <a href="{{route('nemotecnica')}}" class="dropdown-item">Metodología Nemotécnica</a>
@@ -100,7 +133,7 @@
         </div>
         </div>
         <div class="dropdown" >
-            <a id="ModulosDropDown" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre >Modulos</a>
+            <a id="ModulosDropDown" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre style="color: black !important">Modulos</a>
           <div class="dropdown-menu dropdown-menu-left" aria-labelledby="ModulosDropDown">
             <a href="{{ route('elementary') }}" class="dropdown-item">Elementary</a>
             <a href="{{ route('preliminary') }}" class="dropdown-item">Preliminary</a>
@@ -108,32 +141,24 @@
           </div>
         </div>
         @else
-        <h2 style="margin-left: 290px;margin-top: 7px;">Aprendiendo ingles</h2>
+        <h2 style="margin-left: 290px;margin-top: 20px; font-family:Verdana;">English New Deal</h2>
         @endif
       </div>
       <div class="col-md-3 col-xs-1 fono">
-        <p><i class="fas fa-phone"></i> 0512-323156</p>
+        <p style="margin-top: 22px;font-size: 16px;float: left;"><i class="fas fa-phone"></i> 0512-323156</p>
         <img src="{{asset('img/logo-5.JPG')}}" class="logo-right"> 
       </div>
     </div>
   </div>
 
 <main class="py-4">
-            @yield('content')
-            <span class="ir-arriba">Ir arriba</span>
+  <div class="container">
+    @yield('content')
+  </div>
+    <span class="ir-arriba">Ir arriba</span>
 </main>
 
-<!-- Footer -->
-<footer class="page-footer font-small blue">
 
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
-  </div>
-  <!-- Copyright -->
-
-</footer>
-<!-- Footer -->
-@include('includes.modal')
+@include('includes.footer')
 </body>
 </html>

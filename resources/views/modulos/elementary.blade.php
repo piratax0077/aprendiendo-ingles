@@ -32,7 +32,7 @@
 				<strong><p>A elección Lunes, Miercoles o Viernes</p></strong>
 			<h2><i class="fas fa-hourglass-half"></i> Duración</h2>
 				<strong><p>3 Meses - 108 horas pedagógicas</p></strong>
-				<a href="{{route('confirmarPago',['id' => 1])}}" class="btn boton" id="">¡Inscribete ya!</a>
+				<a style="margin-bottom: 30px;" href="{{route('confirmarPago',['id' => 1])}}" class="btn boton" id="btnConfirmElementary">¡Inscribete ya!</a>
 		</div>
 		<img class="logo-right" src="{{asset('img/student3-online.JPG')}}" >
 		<img class="logo-right" src="{{asset('img/student2-online.JPG')}}" >

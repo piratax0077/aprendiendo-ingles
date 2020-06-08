@@ -1,14 +1,26 @@
 .contenedor{
 	height: auto;
 	width: 100%;
-	margin-top: 110px;
+	margin-top: 85px;
 }
+
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 999;
-  background: #eee;
+  background: #303539;
+
+}
+
+.sidebar{
+	background: #303539 !important; 
+	padding: 60px;
+	border-radius: 10px;
+}
+
+.sidebar h3{
+	font-size: 16px;
 }
 
 .nav-link{
@@ -20,14 +32,16 @@
 	margin-left: 5px;
 	transition: 0.5s;
 	font-weight: bold;
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
+	color: black;
 }
 
 .navbar a:hover{
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
-	background: #FFFC33;
+	background: orange;
+	border-radius: 10px;
+}
+
+.nav-link{
+	color: #3B96DD !important;
 }
 
 .form-contact{
@@ -41,6 +55,36 @@
   	background-size: cover;
 }
 
+.titulo{
+	font-size: 21px;
+	font-weight: bold;
+	color: orange;
+	transition: 0.8s;
+}
+
+.article{
+	text-align: justify;
+	margin-right: 30px;
+	font-size: 20px;
+}
+
+#img-mision{
+	border-radius: 10px;
+	height: 460px;
+	width: 270px;
+}
+
+#img-vision{
+	height: 220px;
+	width: 280px;
+	border-radius: 20px;
+}
+
+
+.lista{
+	text-align: justify;
+	font-size: 23px;
+}
 .form-contact-how-work{
 	width: 100%;
 	background-color: #CCC;
@@ -61,7 +105,7 @@
 
 .boton{
 	border-radius: 20px;
-	background: #F3713B;
+	background: #2EC235;
 	color: white;
 	margin-left: 130px;
 }
@@ -81,7 +125,7 @@
 }
 
 .form-white h3{
-	padding-left: 75px;
+	padding-left: 295px;
 	margin-bottom: 30px;
 }
 
@@ -93,10 +137,10 @@
 }
 
 
-.sub-nav{
+.sub-nav,
+.sub-nav-final{
 	display: block;
 	margin-top: 55px;
-	padding: 10px;
 	background-color: white;
 	width: auto;
 	position: fixed;
@@ -110,29 +154,45 @@
 	text-decoration: none;
 	padding: 17px;
 	font-size: 20px;
-	margin-right: 100px;
+	margin-right: 90px;
 	color: black;
 	font-weight: bold;
 	transition: 0.3s;
 	float: left;
 }
 
-.sub-nav img{
+.sub-nav-final a{
+	text-decoration: none;
+	padding: 17px;
+	font-size: 20px;
+	margin-right: 78px;
+	color: black;
+	font-weight: bold;
+	transition: 0.3s;
+	float: left;
+}
+.sub-nav img,
+.sub-nav-final img{
 	height: 60px;
+	margin-top: 3px;
 	border-radius: 999px;
 }
 
-.sub-nav .logo-right{
+.sub-nav .logo-right,
+.sub-nav-final .logo-right{
 	float: right;
+	height: 70px;
 }
 
-.sub-nav a:hover{
+.sub-nav a:hover,
+.sub-nav-final a:hover{
 	background: #eee;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
 }
 
-.sub-nav p{
+.sub-nav p,
+.sub-nav-final p{
 	font-weight: bold;
 	margin-top: 14px;
 	float: left;
@@ -222,26 +282,24 @@
 
 .nuestra-escuela-online h1{
 	width: auto;
-	padding-left: 127px;
-	text-align: justify;
-	font-size: 80px;
+	font-size: 74px;
+	padding-left: 40px;
 	background: transparent;
 	color: white;
 }
 
 .nuestra-escuela-online p{
-	padding-left: 98px;
+	padding-left: 50px;
 	color: white;
-	font-size: 40px;
-	padding-top: 30px;
+	font-size: 32px;
+	padding-top: 40px;
 }
 
 .nuestra-escuela-online .boton{
-	margin-left: 444px;
+	margin-left: 40%;
 	font-size: 25px;
 	font-weight: bold;
 	border-radius: 30px;
-	margin-top: 50px;
 }
 
 .para-quien{
@@ -385,18 +443,18 @@
 }
 
 .modulo{
-	height: 1000px;
+	height: 920px;
 	margin-top: 40px;
 	margin-left: 20px;
 }
 
 .modulo .info-modulo{
 	float: left;
-	width: 800px;
+	width: 600px;
 }
 
 .modulo .info-modulo p{
-	font-size: 20px;
+	font-size: 18px;
 	text-align: justify;
 }
 
@@ -411,15 +469,15 @@
 
 .modulo .info-modulo ol{
 	text-align: justify;
-	font-size: 23px;
+	font-size: 19px;
 }
 
 .modulo .logo-right{
 	margin-top: 60px;
-	border-radius: 900px;
+	border-radius: 500px;
 	margin-left: 40px;
-	height: 400px;
-	width: 470px;
+	height: 300px;
+	width: 400px;
 }
 
 .modulo .info-modulo .clasificacion{
@@ -446,8 +504,8 @@
 
 .recibo-de-pago{
 	padding: 20px;
-	margin-left: 300px;
-	margin-right: 300px;
+	margin-left: 210px;
+	margin-right: 210px;
 }
 
 .recibo-de-pago .titulo-curso{
@@ -455,13 +513,13 @@
 }
 
 .recibo-de-pago .img-pago-curso{
-	margin-left: 190px;
+	margin-left: 165px;
 	margin-top: 20px;
 }
 
 .recibo-de-pago .precio-curso{
 	font-weight: bold;
-	margin-left: 200px;
+	margin-left: 157px;
 	margin-top: 30px;
 	font-size: 25px;
 }
@@ -490,110 +548,44 @@
 }
 
 #img-student-online{
-	width: 200px;
-	margin-left: 50px;
+	width: 250px;
+	border-radius: 900px;
 }
 
-.ingles-idioma-universal,
-.como-afecta,
-.responsabilidad-social,
-.subvencion{
+#img-nemotecnia{
+	width: 274px;
 	height: 300px;
-	width: 100%;
-	margin-bottom: 3px;
+	border-radius: 20px;
 }
 
-.ingles-idioma-universal{
-	margin-top: 10px;
-	display: block;
-	margin-bottom: 15px;
-}
-
-.ingles-idioma-universal h2,
-.responsabilidad-social h2{
-	padding-left: 450px;
-	color: orange;
-	margin-top: 20px;
-}
-
-.ingles-idioma-universal img,
-.responsabilidad-social img{
-	float: left;
-	width: 300px;
-	height: 300px;
-	display: inline-block;
-	border-radius: 500px;
-}
-
-.responsabilidad-social img{
+#img-ventajas{
+	width: 367px;
+	height: 350px;
 	border-radius: 10px;
-	margin-left: 30px;
 }
 
-.ingles-idioma-universal p,
-.responsabilidad-social p{
-	float: right;
-	text-align: justify;
-	display: inline-block;
-	width: 900px;
-	padding-top: 60px;
-	padding-right: 50px;
-	font-size: 27px;
-}
-
-.responsabilidad-social p{
-	font-size: 24px;
-}
-
-.como-afecta,
-.subvencion{
-	background-color: #eee;
-	display: block;
-	padding: 10px;
-}
-
-.como-afecta h2,
-.subvencion h2{
-	float: left;
-	color: orange;
-}
-
-.como-afecta img,
-.subvencion img{
-	float: right;
-	width: 280px;
-	height: 280px;
-	display: inline-block;
-	border-radius: 500px;
-	margin-right: 5px;
-}
-
-.como-afecta p,
-.subvencion p{
-	float: left;
-	text-align: justify;
-	display: inline-block;
-	width: 900px;
-	padding-top: 10px;
-	padding-right: 50px;
-	font-size: 25px;
-}
-
-.responsabilidad-social p{
-	padding-top: 10px;
-}
 
 .form-confirmar-pago{
-	margin-left: 300px;
-	margin-right: 300px;
+	margin-left: 100px;
+	margin-right: 100px;
 }
 
 .form-confirmar-pago h3{
-	margin-left: 93px;
-	font-size: 34px;
+	margin-left: 10px;
+	font-size: 25px;
 }
 
 .form-confirmar-pago .boton{
-	margin-left: 250px;
+	margin-left: 350px;
 }
 
+.page-footer .fab{
+	size: 30px;
+	cursor: pointer;
+}
+
+#recomendation{
+	height: auto;
+	width: auto;
+	float: right;
+}

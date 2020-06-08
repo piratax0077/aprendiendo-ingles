@@ -162,7 +162,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         App\Providers\FormatTimeServiceProvider::class,
-
+        Ixudra\Curl\CurlServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -228,6 +228,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'FormatTime' => App\Helpers\FormatTime::class,
+        'Curl' => Ixudra\Curl\Facades\Curl::class,
     ],
 
 ];

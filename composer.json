@@ -9,12 +9,20 @@
     "license": "MIT",
     "require": {
         "php": "^7.2.5",
+        "anhskohbo/no-captcha": "^3.2",
+        "ctala/transaccion-default": "V0.1.12.3",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^1.0",
         "guzzlehttp/guzzle": "^6.3",
+        "ixudra/curl": "^6.19",
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
-        "laravel/ui": "^2.0"
+        "laravel/ui": "^2.0",
+        "pstpagofacil/sdk-apis-php": "2.1.5.1",
+        "pstpagofacil/sdk-apis-php-signature": "dev-master",
+        "symfony/dotenv": "^5.1",
+        "transbank/transbank-sdk": "^1.6",
+        "vlucas/phpdotenv": "^4.1"
     },
     "require-dev": {
         "facade/ignition": "^2.0",

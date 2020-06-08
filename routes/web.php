@@ -33,6 +33,8 @@ Route::get('vision','ModuloController@vision')->name('vision');
 Route::get('mision','ModuloController@mision')->name('mision');
 Route::get('mis-cursos/{id}','InfoController@misCursos')->name('misCursos');
 Route::get('detalle-venta/{id}','InfoController@detalleVenta')->name('detalle-venta');
+Route::get('quiz','InfoController@doQuiz')->name('quiz');
+Route::get('/user/resultado-quiz','InfoController@resultadoQuiz')->name('resultado-quiz');
 
 
 Auth::routes();
@@ -41,3 +43,7 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('metodologia-online','InfoController@online')->name('online');
 Route::get('metodologia-nemotecnica','InfoController@nemotecnica')->name('nemotecnica');
 Route::get('ventajas-beneficios','InfoController@ventajas')->name('ventajas');
+Route::get('/final','InfoController@getContract');
+
+Route::post('/trx','PagofacilController@transaccion');
+Route::get('/check_curl','PagofacilController@getData');

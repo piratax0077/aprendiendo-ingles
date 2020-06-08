@@ -8,7 +8,7 @@
 			<img src="{{asset('img/logo-4.JPG')}}" style="width: 250px;" >
 		</div>
 		<div class="col-md-9">
-			<table class="table" style="width: 1000px; !important;">
+			<table class="table" >
 				<tr>
 					<td>Usuario</td>
 					<td>{{$miVenta->user->name.' '.$miVenta->user->surname}}</td>
