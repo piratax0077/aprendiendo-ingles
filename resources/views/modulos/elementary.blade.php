@@ -2,9 +2,9 @@
 @section('content')
 <div class="contenedor">
 @include('includes.slider')
-<div class="modulo">
-			<div class="info-modulo">
-			<h1>Elementary - Nivel Básico</h1>
+<div class="row">
+	<div class="col-md-7">
+		<h1>Elementary - Nivel Básico</h1>
 			<strong><p class="clasificacion">A2 - A2 +</p></strong>
 			<h2><i class="fas fa-chalkboard-teacher"></i> Descripción</h2>
 			<p>Es un método de aprendizaje natural garantizado, de manera rápida, amena y eficaz. Nos permite reducir el estres que produce el aprendizaje del idioma.</p>
@@ -33,11 +33,12 @@
 			<h2><i class="fas fa-hourglass-half"></i> Duración</h2>
 				<strong><p>3 Meses - 108 horas pedagógicas</p></strong>
 				<a style="margin-bottom: 30px;" href="{{route('confirmarPago',['id' => 1])}}" class="btn boton" id="btnConfirmElementary">¡Inscribete ya!</a>
-		</div>
+	</div>
+	<div class="col-md-5">
 		<img class="logo-right" src="{{asset('img/student3-online.JPG')}}" >
 		<img class="logo-right" src="{{asset('img/student2-online.JPG')}}" >
+	</div>
 </div>
-
 
 
 @include('includes.tabla')	

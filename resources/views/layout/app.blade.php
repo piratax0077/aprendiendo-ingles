@@ -37,15 +37,13 @@
                         <a class="nav-link" href="{{route('home')}}"><i class="fas fa-home" ></i> Inicio<span class="sr-only">(current)</span></a>
                     </li>
                     @endif
-                    <li>
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" style="width: 50px; margin-left: 50px; margin-top: 4px;">
-                    </li>
+                    
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
-                        <li> <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Flag_of_Chile.svg" style="width: 50px; margin-right: 50px; margin-top: 4px;"></li>
+                        
                         @guest
                         <form class="form-inline" method="post" action="{{ route('login') }}">
                           @csrf
@@ -141,12 +139,12 @@
           </div>
         </div>
         @else
-        <h2 style="margin-left: 290px;margin-top: 20px; font-family:Verdana;">English New Deal</h2>
+        <h2 style="margin-left: 30%;margin-top: 20px; font-family:Verdana;">English New Deal</h2>
         @endif
       </div>
       <div class="col-md-3 col-xs-1 fono">
         <p style="margin-top: 22px;font-size: 16px;float: left;"><i class="fas fa-phone"></i> 0512-323156</p>
-        <img src="{{asset('img/logo-5.JPG')}}" class="logo-right"> 
+        <img src="{{asset('img/bandera-usa.JPG')}}" style="width: 23%; float: right;"> 
       </div>
     </div>
   </div>

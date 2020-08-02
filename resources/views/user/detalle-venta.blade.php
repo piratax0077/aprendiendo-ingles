@@ -3,6 +3,8 @@
 
 <div class="contenedor">
 	<div style="margin-top: 170px;"></div>
+	<h1 class="titulo">Detalle de su matrícula</h1>
+	<p>A continuación usted puede ver el detalle del pago de su matrícula</p>
 	<div class="row">
 		<div class="col-md-3">
 			<img src="{{asset('img/logo-4.JPG')}}" style="width: 250px;" >

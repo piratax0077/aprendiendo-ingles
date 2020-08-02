@@ -4,7 +4,7 @@
 	$date = new DateTime($venta->created_at);
 ?>
 <div class="contenedor">
-	<article>En {{$venta->comuna}},{{ $date->format('Y-m-d') }}, entre el <span style="font-weight: bold">Instituto Nacional de Ingles Conversacional S.P.A. </span>RUT 76.778.562-3, domiciliado en santa rosa 697, Coquimbo. En adelante "Proveedor de Enseñanza" o "INSTITUTO NACIONAL DE INGLES CONVERSACIONAL S.P.A." y don(a)<span style="font-weight: bold"> {{ $venta->user->name.' '.$venta->user->surname }}</span>, domiciliado en calle ____________ N° ___ de la ciudad de {{$venta->comuna}} en adelante "el alumno" o "contratante" se ha celebrado el siguiente contrato de enseñanza, que se regirá por las disposiciones de la Ley 19.496. de protección al consumidor en lo que corresponde y en especial por las siguientes disposiciones:</article>
+	<article>En {{$venta->comuna}},<strong>{{ $date->format('Y-m-d') }}</strong>, entre el <span style="font-weight: bold">Instituto Nacional de Ingles Conversacional S.P.A. </span>RUT 76.778.562-3, domiciliado en santa rosa 697, Coquimbo. En adelante "Proveedor de Enseñanza" o "INSTITUTO NACIONAL DE INGLES CONVERSACIONAL S.P.A." y don(a)<span style="font-weight: bold"> {{ $venta->user->name.' '.$venta->user->surname }}</span>, domiciliado en calle <strong>{{$venta->user->direccion}}</strong> N° ___ de la ciudad de <strong>{{$venta->comuna}}</strong> en adelante "el alumno" o "contratante" se ha celebrado el siguiente contrato de enseñanza, que se regirá por las disposiciones de la Ley 19.496. de protección al consumidor en lo que corresponde y en especial por las siguientes disposiciones:</article>
 	<article><span style="font-weight: bold;">PRIMERO:</span> Por el presente acto e instrumento el alumno contrata el siguiente curso de capacitación bajo el formato de modalidad ONLINE, <span style="font-weight: bold;">PROYECTO EDUCATIVO DE INGLES CONVERSACIONAL GENERACIÓN BILINGUE</span> con una duración de tres meses de asesoría académica, para el módulo {{ $venta->curso->nombreCurso }}</article>
 	<p> <span style="font-weight: bold">1.-DERECHOS Y OBLIGACIONES DEL ALUMNO</span></p>
 	<article> <span style="font-weight: bold">SEGUNDO</span> La contratación del curso de capacitación ingles conversacional, bajo el formato modalidad ONLINE otorga al alumno los siguiente derechos:</p>
@@ -51,14 +51,13 @@ del curso de capacitación ingles conversacional bajo el formato modalidad ONLIN
 SpA,; como asimismo la matricula:
 
 <li>MATRICULA</li>
-El alumno paga en este acto al contado en: efectivo la suma de ${{$venta->curso->valor}}pesos para gastos administrativos de su incorporación y la reserva del cupo valor preferencial promocional. Matricula, la que luego de iniciadas las clases no podrán ser de vuelta por ninguna causa.
+El alumno paga en este acto al contado en: efectivo la suma de <strong>${{$venta->curso->valor}}</strong> pesos para gastos administrativos de su incorporación y la reserva del cupo valor preferencial promocional. Matricula, la que luego de iniciadas las clases no podrán ser de vuelta por ninguna causa.
 <li>MODALIDADES DE PAGO DEL VALOR DEL CURSO</li>
 <ol>
-<li> PLAN PAGO CONTADO: El alumno paga en este acto al contado en: efectivo, tarjeta de crédito, transferencia o
-débito la suma de ${{$venta->curso->valor}}</li>
+<li> PLAN PAGO CONTADO: El alumno paga en este acto al contado en: efectivo, tarjeta de crédito, transferencia o débito la suma de <strong> ${{$venta->curso->valor}}</strong></li>
 <li>PLAN CREDITO</li>
 El alumno se obligara a pagar a INSTITUTO NACIONAL DE INGLES CONVERSACIONAL SpA.
-La cantidad de $ {{$venta->curso->valor}} pesos, en ___cuotas iguales y sucesivas cada una de ellas de $_________
+La cantidad de <strong>$ {{$venta->curso->valor}}</strong> pesos, en ___cuotas iguales y sucesivas cada una de ellas de $_________
 pesos, venciendo la primera de ellas ____/___________ / 2020.- aceptadas por el alumno contratante.
 <li> INSTITUTO NACIONAL DE INGLES CONVERSACIONAL S.p.A. No estará obligado a notificar
 la fecha de pago y podrá realizar su cobranza en una entidad financiera.</li>
@@ -67,17 +66,16 @@ la fecha de pago y podrá realizar su cobranza en una entidad financiera.</li>
 <li>MOROSIDAD Y EXIGIBILIDAD DE PAGO DEL VALOR DEL CURSO</li>
 1.- El presente contrato tendrá el carácter de irrevocable mientras dure la relación que lo origino o exista
 deuda.</article>
-SEPTIMO: Se deja establecido que corresponderá al contratante acreditar mediante boletas oficiales de S.I.I .el
-pago en que se divide la obligación contraída.
-OCTAVO: En caso de no pago oportuno, al quinto día pagaré intereses y gastos de cobranza de $1.000 (mil
-pesos ), por retardo de las cuotas impagas; todo dentro del marco de la ley.
-NOVENO: A petición del alumno, en caso excepcional y calificados por INSTITUTO NACIONAL DE INGLES
-CONVERSACIONAL S.p.A. Las partes de común acuerdo podrán resciliar el presente contrato, con la
-Cancelación al momento de hacerse, un monto de una mensualidad ser pagadas a INSTITUTO NACIONAL
-DE INGLES CONVERSACIONAL S.p.A., monto que INSTITUTO NACIONAL DE INGLES
-CONVERSACIONAL S.p.A.. y el suscriptor convienen que es una cantidad razonable debido a la terminación
-anticipada por impedimento del presente contrato.
-DECIMO: Las partes fijan domicilio en la ciudad de Coquimbo, sometiéndose a la jurisdicción del tribunal.
+<strong>SEPTIMO:</strong> 
+<p>Se deja establecido que corresponderá al contratante acreditar mediante boletas oficiales de S.I.I .el pago en que se divide la obligación contraída.</p>
+
+<strong>OCTAVO:</strong> 
+<p>En caso de no pago oportuno, al quinto día pagaré intereses y gastos de cobranza de $1.000 (mil pesos ), por retardo de las cuotas impagas; todo dentro del marco de la ley.</p>
+<strong>NOVENO:</strong> 
+<p>A petición del alumno, en caso excepcional y calificados por INSTITUTO NACIONAL DE INGLES CONVERSACIONAL S.p.A. Las partes de común acuerdo podrán resciliar el presente contrato, con la cancelación al momento de hacerse, un monto de una mensualidad ser pagadas a INSTITUTO NACIONAL DE INGLES CONVERSACIONAL S.p.A., monto que INSTITUTO NACIONAL DE INGLES
+CONVERSACIONAL S.p.A.. y el suscriptor convienen que es una cantidad razonable debido a la terminación anticipada por impedimento del presente contrato.</p>
+<strong>DECIMO:</strong> 
+<p>Las partes fijan domicilio en la ciudad de Coquimbo, sometiéndose a la jurisdicción del tribunal.
 Para constancia y previa lectura, el documento electrónico en que se formaliza este contrato será archivado y éste
 será accesible al contratante, enviando una copia su correo electrónico.</p>
 <h2 class="titulo">Datos del beneficiario</h2>

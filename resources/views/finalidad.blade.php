@@ -3,7 +3,7 @@
 <div class="contenedor">
 <div style="margin-top: 150px;"></div>
 <div class="row">
-	<div class="col-md-7">
+	<div class="col-md-7 background-gris">
 		<h1 class="titulo">Finalidad</h1>
 		<p class="article"><span style="color: red; font-weight: bold;">“Aporta valor a tu vida, habla inglés. Comienza ahora paso a paso con
 		esfuerzo y dedicación superaras tus limitaciones”.</span><br><br>

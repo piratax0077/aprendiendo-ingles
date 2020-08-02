@@ -16,10 +16,7 @@ use App\Transaccion;
 
 class InfoController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+
     
     public function index(Request $request){
 
@@ -51,8 +48,6 @@ class InfoController extends Controller
             $venta->comuna = $comuna;
             $venta->estado = "PENDIENTE";
 
-            $venta->save();
-
             if ($venta) {
 
               //Realizar transacción en estado pendiente
@@ -71,9 +66,9 @@ class InfoController extends Controller
                     "x_currency"=> "CLP",
                     "x_reference"=> $x_reference,
                     "x_customer_email"=> $user->email,
-                     "x_url_complete"=> "https://postman-echo.com/post",
+                     "x_url_complete"=> "http://aprendiendo-ingles.com.devel/end",
                     "x_url_cancel"=> "https://postman-echo.com/post",
-                    "x_url_callback"=> "https://aprendiendo-pagofacil.com.devel/callback",
+                    "x_url_callback"=> "http://aprendiendo-ingles.com.devel/callback",
                      "x_shop_country"=> "CL",
                     "x_session_id"=> "$x_session_id"
                 ];
@@ -81,15 +76,23 @@ class InfoController extends Controller
                 $x_signature = $sHelper->signPayload($trxBody);
                 $trxBody["x_signature"] = $x_signature;
 
-                $response = Curl::to('https://apis.pgf.cl/trxs')
+                $response = Curl::to('https://apis-dev.pgf.cl/trxs')
                             ->withData($trxBody)
                             ->asJson()
                             ->post();
 
                   $urlPago = $response->data->payUrl[0]->url;
+                  $idTrx = $response->data->idTrx;
+
+                  $venta->idTrx = $idTrx;
+                  $venta->save();
 
                 return view('info',[
-                'url' => $urlPago
+                'url' => $urlPago,
+                'idTrx' => $idTrx,
+                'amount' => $amountDouble,
+                'user' => $user,
+                'modulo' => $venta->curso->nombreCurso
             ]);
 
         }
@@ -185,7 +188,9 @@ class InfoController extends Controller
 
 public function getContract(){
   $ultima_venta = Ventas::all()->last();
-
   return view('user.contract',['venta' => $ultima_venta]);
 }
+
+
+
 }

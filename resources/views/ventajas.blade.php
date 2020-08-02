@@ -2,7 +2,7 @@
 @section('content')
 <div class="contenedor">
 	
-		<div style="margin-top: 150px;"></div>
+		<div style="margin-top: 100px;"></div>
 	<div class="row">
 		<div class="col-md-4">
 			<img src="https://www.trecebits.com/wp-content/uploads/2020/03/clases-Online-confinamiento-plataformas-virtuales.jpg" id="img-ventajas">

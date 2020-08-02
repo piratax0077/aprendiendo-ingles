@@ -71,12 +71,12 @@
 #img-mision{
 	border-radius: 10px;
 	height: 460px;
-	width: 270px;
+	width: 254px;
 }
 
 #img-vision{
 	height: 220px;
-	width: 280px;
+	width: 265px;
 	border-radius: 20px;
 }
 
@@ -174,14 +174,26 @@
 .sub-nav img,
 .sub-nav-final img{
 	height: 60px;
-	margin-top: 3px;
+	margin-top: 2%;
 	border-radius: 999px;
+	margin-bottom: 2%;
 }
 
 .sub-nav .logo-right,
 .sub-nav-final .logo-right{
-	float: right;
+	margin-left: 36%;
 	height: 70px;
+}
+
+.background-gris{
+	background: #eee;
+	border-radius: 10px;
+	font-weight: bold;
+	height: auto; 
+	padding: 20px;
+	font-size: 18px;
+	margin-bottom: 30px;
+	text-align: justify;
 }
 
 .sub-nav a:hover,
@@ -267,10 +279,10 @@
 }
 
 .nuestra-escuela-online{
-	padding-top: 100px;
-	padding-bottom: 30px;
-	padding-left: 100px;
-	padding-right: 100px;
+	padding-top: 8%;
+	padding-bottom: 2%;
+	padding-left: 8%;
+	padding-right: 8%;
 	width: 100%;
 	background-image: url('https://diariodepalabras.files.wordpress.com/2012/12/elefante.jpg?w=443&h=665');
 	 background-attachment: fixed;
@@ -280,10 +292,11 @@
 
 }
 
+
 .nuestra-escuela-online h1{
 	width: auto;
 	font-size: 74px;
-	padding-left: 40px;
+	padding-left: 6%;
 	background: transparent;
 	color: white;
 }
@@ -472,7 +485,7 @@
 	font-size: 19px;
 }
 
-.modulo .logo-right{
+.logo-right{
 	margin-top: 60px;
 	border-radius: 500px;
 	margin-left: 40px;
@@ -553,9 +566,12 @@
 }
 
 #img-nemotecnia{
-	width: 274px;
-	height: 300px;
+	width: 224px;
 	border-radius: 20px;
+}
+
+.img_banner{
+	width: 300px;
 }
 
 #img-ventajas{

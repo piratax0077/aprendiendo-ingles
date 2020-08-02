@@ -43,7 +43,7 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('metodologia-online','InfoController@online')->name('online');
 Route::get('metodologia-nemotecnica','InfoController@nemotecnica')->name('nemotecnica');
 Route::get('ventajas-beneficios','InfoController@ventajas')->name('ventajas');
-Route::get('/final','InfoController@getContract');
+Route::get('/final','InfoController@getContract')->name('final');
 
-Route::post('/trx','PagofacilController@transaccion');
-Route::get('/check_curl','PagofacilController@getData');
+Route::post('/callback','PagofacilController@callback');
+Route::post('/end','PagofacilController@end');

@@ -3,11 +3,10 @@
 <div class="contenedor">
 
 @include('includes.slider')
-
-	<div class="modulo ">
-		<div class="info-modulo">
-			<h1>Higher - Nivel avanzado</h1>
-			<strong><p class="clasificacion">B2 - B2 +</p></strong>
+<div class="row">
+	<div class="col-md-7">
+		<h1>Higher - Nivel avanzado</h1>
+				<strong><p class="clasificacion">B2 - B2 +</p></strong>
 			<h2><i class="fas fa-chalkboard-teacher"></i> Descripción</h2>
 			<p>En este nivel será capaz de comunicarse fluidamente utilizando el ingles como una herramienta eficaz de trabajo.</p>
 		<h2><i class="fas fa-bullseye"></i> Objetivos del curso</h2>
@@ -33,19 +32,17 @@
 			<p>A elección Lunes, Miercoles o Viernes</p>
 		<h2><i class="fas fa-hourglass-half"></i> Duración</h2>
 			<p>3 Meses, Total 108 horas pedagógicas online</p>
-			<a href="{{route('confirmarPago',['id' => 3])}}" class="btn boton">¡Inscribete ya!</a>
-		</div>
-		
+			<a style="margin-bottom: 30px;" href="{{route('confirmarPago',['id' => 3])}}" class="btn boton">¡Inscribete ya!</a>
+	</div>
+	<div class="col-md-5">
 		<img class="logo-right" src="{{asset('img/estatua-libertad.JPG')}}" >
 		<img class="logo-right" src="{{asset('img/students-online.JPG')}}" >
-		
+	</div>
 </div>
-</div>
+
 
 @include('includes.tabla')
 @include('includes.nuestra-escuela-online')
 </div>
-
-
 
 @endsection
